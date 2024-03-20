@@ -12,8 +12,8 @@ def predict_text_with_score(model, text):
 
 
 st.title('Text Classification App')
-user_input = st.text_area("Enter text here:")
+user_input = st.text_area("Enter your review to see whether its good or bad:")
 if st.button('Predict'):
     prediction, scores = predict_text_with_score(model, user_input)
-    st.write("Predicted class:", prediction)
+    st.write("This review is:", prediction)
     st.write("Probability Scores:", scores)
